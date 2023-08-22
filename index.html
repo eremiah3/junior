@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <title>Vote for Kimberly Smith</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .left {
+    padding: 20px;
+  }
+  
+  .right {
+    padding: 20px;
+    text-align: right;
+  }
+  
+  .image {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .vote-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .vote-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .animation {
+    animation: pulse 1s infinite;
+    color: black;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .left {
+      flex: 4;
+    }
+    
+    .right {
+      flex: 6;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+    <img class="image" src="IMG/unnamed.jpg" alt="Contestant Image">
+  </div>
+  <div class="right">
+    <p>Type this on the right<br>
+    TO VOTE FOR KIMBERLY SMITH CONTESTANT 147<br>
+    BRAZZY KLOSET ONLINE INFLUENCER AUDITIONS 2023<br>
+    COPY BTC WALLET BELOW TO VOTE FOR CONTESTANT 147<br>
+    IG:kismith9437<br>
+    Email:kimmytwitch20@gmail.com</p>
+    <button class="vote-button animation" onclick="vote()">Copy this to vote</button>
+    <p class="animation">1F3jySJ7TY78qcvT3noYLMUVZ5thZd54qQ</p>
+  </div>
+</div>
+
+<div class="footer">
+  &copy; 2023 BRAZZY KLOSET. All rights reserved.
+</div>
+
+<script>
+  function vote() {
+    // Code to copy the BTC wallet address to clipboard
+    var walletAddress = "1F3jySJ7TY78qcvT3noYLMUVZ5thZd54qQ";
+    var tempInput = document.createElement("input");
+    tempInput.value = walletAddress;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    alert("Wallet address copied to clipboard!");
+  }
+</script>
+
+</body>
+</html>
